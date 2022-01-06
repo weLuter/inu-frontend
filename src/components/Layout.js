@@ -1,11 +1,12 @@
 import React from 'react';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 const Layout = ({children}) => {
   return(
-    <div className="max-w-7xl mx-auto px-4 sm:px-6">
-      <div className="root-app">
-        <div>{children}</div>
-      </div>
+    <div className="h-screen w-full bg-slate-300 dark:bg-slate-700">
+      {children}
+      <Footer />
     </div>
   )
 }
