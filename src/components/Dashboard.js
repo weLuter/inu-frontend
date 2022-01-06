@@ -86,9 +86,9 @@ const Dashboard = () => {
     } else if (pageIndex === 2) {
       content = (
         <div class="flex flex-grow flex-wrap flex-col lg:flex-row">
-          {highlight("Balance ($MCC)", 0, false)}
+          {highlight("Balance ($INC)", 0, false)}
           {highlight("Balance Value ($USD)", 0, true)}
-          {highlight("Reflections Earned ($MCC)", 0, false)}
+          {highlight("Reflections Earned ($INC)", 0, false)}
           {highlight("Reflections Earned ($USD)", 0, true)}
         </div>
       );
