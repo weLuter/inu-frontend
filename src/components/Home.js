@@ -7,6 +7,7 @@ import SalesTax from './SalesTax'
 import ExternalLinks from './ExternalLinks'
 import Charts from './Charts'
 import Uniswap from './Uniswap'
+import Footer from './Footer'
 
 const Home = () => {
   function scrollToBottom() {
@@ -29,6 +30,7 @@ const Home = () => {
         <Charts />
       </div>
       <Uniswap/>
+      <Footer />
     </>
   )
 }
