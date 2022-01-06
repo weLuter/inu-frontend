@@ -14,5 +14,7 @@ module.exports = {
       'loading': "url('../public/loading.svg')",
     },
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }
