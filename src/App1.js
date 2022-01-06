@@ -95,7 +95,7 @@ export default function App() {
             </dl>
           </div>
         </div>
-        <div className="mx-auto shadow overflow-hidden sm:rounded-lg bg-white max-w-screen-sm mb-4">
+        <div className="mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4 mx-2">
           <div className="px-4 py-3 sm:px-6">
             <h3 className="text-2xl leading-6 font-medium text-gray-900">Purchase Tax</h3>
           </div>
@@ -116,7 +116,7 @@ export default function App() {
             </dl>
           </div>
         </div>
-        <div className="mx-auto shadow overflow-hidden sm:rounded-lg bg-white max-w-screen-sm mb-4">
+        <div className="mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4">
           <div className="px-4 py-3 sm:px-6">
             <h3 className="text-2xl leading-6 font-medium text-gray-900">Sales Tax</h3>
           </div>
@@ -145,7 +145,7 @@ export default function App() {
             </dl>
           </div>
         </div>
-        <div className="mx-auto shadow overflow-hidden sm:rounded-lg bg-white max-w-screen-sm mb-4">
+        <div className="mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4 mx-2">
           <div className="px-4 py-3 sm:px-6">
             <h3 className="text-2xl leading-6 font-medium text-gray-900">Relevant Links</h3>
           </div>
@@ -162,7 +162,7 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div className="mx-auto shadow overflow-hidden sm:rounded-lg bg-white max-w-screen-sm mb-4">
+        <div className="mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4 sm:mx-2">
           <div className="px-4 py-3 sm:px-6">
             <h3 className="text-2xl leading-6 font-medium text-gray-900">Charts</h3>
           </div>
