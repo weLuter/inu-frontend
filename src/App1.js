@@ -5,7 +5,7 @@ import logo16 from './images/logo16.png'
 export default function App() {
   return (
       <div className="h-screen w-full bg-slate-200">
-        <div className="sticky top-0 w-full z-20 h-24 md:px-28 px-20 bg-white flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="sticky top-0 w-full z-20 h-24 md:px-28 px-4 sm:px-20 bg-white flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <img
@@ -29,34 +29,33 @@ export default function App() {
             </a>
           </div>
         </div>
-        <div class="flex lg:flex-row flex-col lg:justify-between justify-center items-center w-full h-[calc(100%-6rem)] bg-slate-200 bg-slate-200 px-6 md:px-32">
-          <div>
-            <p class="text-center md:text-left font-extrabold text-gray-900 sm:text-8xl text-7xl">Inu Capital</p>
-            <p class="text-center md:text-left pt-2 text-3xl sm:text-4xl text-blue-600 mb-8 lg:mb-0">defi is hard. we make it easy and farm for you</p>
-          </div>
-          <div className="h-12 flex flex-row">
-            <div className="flex rounded-md shadow">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Buy on Uniswap
-              </a>
+        <div class="flex flex-col justify-center items-center w-full h-[calc(100%-6rem)] bg-slate-200 bg-slate-200 px-6 md:px-32">
+            <p class="text-center md:text-left font-extrabold text-gray-900 sm:text-8xl text-6xl">Inu Capital</p>
+            <p class="text-center md:text-left pt-2 text-3xl sm:text-4xl text-blue-600 mb-8">defi is hard. we make it easy and farm for you</p>
+            <div class="h-28 sm:hidden block"/>
+            <div className="mt-2 h-12 flex sm:space-x-2 sm:space-y-0 space-y-2 sm:flex-row flex-col justify-center">
+              <div className="flex rounded-md shadow">
+                <a
+                  href="#buynow"
+                  className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                >
+                  Buy on Uniswap
+                </a>
+              </div>
+              <div className="sm:ml-3  ml-0 flex rounded-md shadow">
+                <a
+                  href="#learnmore"
+                  className="flex items-center w-full justify-center mt-0 sm:mt-5 px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white "
+                >
+                  Learn more
+                </a>
+              </div>
             </div>
-            <div className="ml-3 flex rounded-md shadow">
-              <a
-                href="#learnmore"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white "
-              >
-                Learn more
-              </a>
-            </div>
-          </div>
         </div>
         <div id="learnmore" class="scroll-margin-top-5 bg-slate-200 py-5">
         <div className=" mx-auto shadow overflow-hidden sm:rounded-lg max-w-screen-sm mb-4">
           <div className="px-4 py-3 sm:px-6 bg-white">
-            <h3 className="text-2xl leading-6 font-medium text-gray-900">Details</h3>
+            <h3 className="text-2xl leading-6 font-medium text-gray-900">Tokenomics</h3>
           </div>
           <div className="border-t border-gray-200">
             <dl>
@@ -95,7 +94,7 @@ export default function App() {
             </dl>
           </div>
         </div>
-        <div className="mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4 mx-2">
+        <div className="hidden mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4 mx-2">
           <div className="px-4 py-3 sm:px-6">
             <h3 className="text-2xl leading-6 font-medium text-gray-900">Purchase Tax</h3>
           </div>
@@ -116,7 +115,7 @@ export default function App() {
             </dl>
           </div>
         </div>
-        <div className="mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4">
+        <div className="hidden mx-auto shadow overflow-hidden rounded-lg bg-white max-w-screen-sm mb-4">
           <div className="px-4 py-3 sm:px-6">
             <h3 className="text-2xl leading-6 font-medium text-gray-900">Sales Tax</h3>
           </div>
@@ -190,17 +189,28 @@ export default function App() {
           </div>
         </div>
         </div>
+        <div class="bg-slate-200">
+        <iframe
+          id="buynow"
+          title="a"
+          src="https://app.uniswap.org/#/swap"
+          height="660px"
+          width="100%"
+          class="max-w-screen-sm mx-auto rounded-lg pb-4"
+        />
+        </div>
 
-        <div className="mx-auto flex sm:flex-row flex-col justify-between border-t-2 border-gray-300 py-4 px-4 bg-slate-200">
-          <div>
-            <p class="text-gray-400">© 2022 Inu Capital, Inc. All rights reserved</p>
-          </div>
-          <div className="flex flex-row sm:pt-0 pt-2">
+        <div className="mx-auto flex flex-col justify-between border-t-2 border-gray-300 py-4 px-4 bg-slate-200">
+
+          <div className="mx-auto flex flex-row sm:pt-0 pt-2 mb-1.5 pb-1">
             <a className="" href="https://etherscan.io/"><FileCodeFill className="ButtonLink"/></a>
             <a className="" href="https://t.me/InuCapitalEntryPortal"><Telegram className="ButtonLink"/></a>
             <a className="" href="https://twitter.com/InuCapital"><Twitter className="ButtonLink"/></a>
             <a className="" href="https://medium.com"><Medium className="ButtonLink"/></a>
             <a className="" href="https://github.com"><Github className="ButtonLink"/></a>
+          </div>
+          <div class="mx-auto">
+            <p class="text-gray-400">© 2022 Inu Capital, Inc. All rights reserved</p>
           </div>
         </div>
       </div>
