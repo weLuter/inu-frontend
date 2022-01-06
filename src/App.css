@@ -1,57 +1,11 @@
-.App {
-  text-align: center;
-  background-image: url(./images/2.svg);
-  font-family: 'Josefin Sans', sans-serif;
-  color: #ccd1d9;
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.NavBar {
-  position: fixed;
+.root-app {
+  position: absolute;
   top: 0;
   width: 100%;
-  height: 80px;
-  background: linear-gradient(45deg, #006d5b, #4169E1);
 }
 
 .ButtonLink {
   width: 40px;
   height: 20px;
-  color: #ccd1d9;
-}
-
-.ButtonGroup {
-  width: 200px;
-  margin: auto;
-  flex: 1;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.Footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  /* background: #006d5b; */
-}
-
-.social-icon {
-  width: 40px;
-}
-
-.button-launch {
-  color: #006d5b;
-}
-
-.h1 {
-  color: #ccd1d9;
+  color: #9ca3b0;
 }
