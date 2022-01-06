@@ -16,14 +16,14 @@ export default function App() {
             </a>
           </div>
           <a className="sm:block hidden" href="https://etherscan.io/"><FileCodeFill className="ButtonLink"/></a>
-          <a className="sm:block hidden" href="https://t.me/"><Telegram className="ButtonLink"/></a>
-          <a className="sm:block hidden" href="https://twitter.com/"><Twitter className="ButtonLink"/></a>
+          <a className="sm:block hidden" href="https://t.me/inucapitalentryportal"><Telegram className="ButtonLink"/></a>
+          <a className="sm:block hidden" href="https://twitter.com/InuCapital"><Twitter className="ButtonLink"/></a>
           <a className="sm:block hidden" href="https://medium.com"><Medium className="ButtonLink"/></a>
           <a className="sm:block hidden" href="https://github.com"><Github className="ButtonLink"/></a>
           <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
             >
               Dashboard
             </a>
@@ -32,13 +32,13 @@ export default function App() {
         <div class="flex lg:flex-row flex-col lg:justify-between justify-center items-center w-full h-[calc(100%-6rem)] bg-slate-200 bg-slate-200 px-6 md:px-32">
           <div>
             <p class="text-center md:text-left font-extrabold text-gray-900 sm:text-8xl text-7xl">Inu Capital</p>
-            <p class="text-center md:text-left pt-2 text-3xl sm:text-4xl text-indigo-600 mb-8 lg:mb-0">we make defi and crypto investment easy</p>
+            <p class="text-center md:text-left pt-2 text-3xl sm:text-4xl text-blue-600 mb-8 lg:mb-0">defi is hard. we make it easy and farm for you</p>
           </div>
           <div className="h-12 flex flex-row">
             <div className="flex rounded-md shadow">
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
                 Buy on Uniswap
               </a>
@@ -46,7 +46,7 @@ export default function App() {
             <div className="ml-3 flex rounded-md shadow">
               <a
                 href="#learnmore"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white "
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white "
               >
                 Learn more
               </a>
@@ -147,12 +147,44 @@ export default function App() {
         </div>
         <div className="mx-auto shadow overflow-hidden sm:rounded-lg bg-white max-w-screen-sm mb-4">
           <div className="px-4 py-3 sm:px-6">
-            <h3 className="text-2xl leading-6 font-medium text-gray-900">Links</h3>
+            <h3 className="text-2xl leading-6 font-medium text-gray-900">Relevant Links</h3>
           </div>
           <div className="bg-slate-100 px-4 py-3 text-md font-medium text-gray-500">
-          <div className="flex rounded-md shadow">
-              <a href="#" className="disabled flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700" disabled>
+            <div className="flex rounded-md shadow mb-2">
+              <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
                 Buy on Uniswap
+              </a>
+            </div>
+            <div className="flex rounded-md shadow">
+              <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                Contract
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto shadow overflow-hidden sm:rounded-lg bg-white max-w-screen-sm mb-4">
+          <div className="px-4 py-3 sm:px-6">
+            <h3 className="text-2xl leading-6 font-medium text-gray-900">Charts</h3>
+          </div>
+          <div className="bg-slate-100 px-4 py-3 text-md font-medium text-gray-500">
+            <div className="flex rounded-md shadow mb-2">
+              <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                CoinMarketCap
+              </a>
+            </div>
+            <div className="flex rounded-md shadow mb-2">
+              <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                CoinGecko
+              </a>
+            </div>
+            <div className="flex rounded-md shadow mb-2">
+              <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                DexScreener
+              </a>
+            </div>
+            <div className="flex rounded-md shadow mb-2">
+              <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                DexTools
               </a>
             </div>
           </div>
@@ -165,8 +197,8 @@ export default function App() {
           </div>
           <div className="flex flex-row sm:pt-0 pt-2">
             <a className="" href="https://etherscan.io/"><FileCodeFill className="ButtonLink"/></a>
-            <a className="" href="https://t.me/"><Telegram className="ButtonLink"/></a>
-            <a className="" href="https://twitter.com/"><Twitter className="ButtonLink"/></a>
+            <a className="" href="https://t.me/InuCapitalEntryPortal"><Telegram className="ButtonLink"/></a>
+            <a className="" href="https://twitter.com/InuCapital"><Twitter className="ButtonLink"/></a>
             <a className="" href="https://medium.com"><Medium className="ButtonLink"/></a>
             <a className="" href="https://github.com"><Github className="ButtonLink"/></a>
           </div>
