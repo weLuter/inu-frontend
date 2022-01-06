@@ -14,7 +14,7 @@ export default function App() {
 
   return (
       <div className="h-screen w-full bg-slate-300 dark:bg-slate-700">
-        <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-slate-500 flex justify-between items-center border-b-2 border-gray-100 py-6 space-x-10">
+        <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-slate-500 flex justify-between items-center py-6 space-x-10">
           <div className="flex justify-start flex-grow">
             <a href="#">
               <img
