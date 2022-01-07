@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = (props) => {
   return (
-    <div class="flex flex-col justify-center items-center w-full h-[calc(100%-6rem)] bg-slate-300 dark:bg-slate-700 px-6 md:px-32">
+    <div class="flex flex-col justify-center items-center w-full h-[calc(100%-6rem)] bg-slate-400 dark:bg-slate-700 px-6 md:px-32">
       <p class="text-center md:text-left font-bold text-gray-900 sm:text-8xl text-6xl">Inu Capital</p>
       <p class="text-center md:text-left pt-2 text-3xl sm:text-4xl text-blue-600 mb-8">defi is hard. we make it easy and farm for you</p>
       <div class="h-12 sm:h-20 sm:hidden block"/>

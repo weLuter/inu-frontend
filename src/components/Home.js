@@ -22,14 +22,14 @@ const Home = () => {
     <>
       <NavBar />
       <Banner scroll={scrollToBottom} />
-      <div id="learnmore" class="bg-slate-300 dark:bg-slate-700 py-5">
+      <div id="learnmore" class="bg-slate-400 dark:bg-slate-700 py-5">
         <Tokenomics/>
         <PurchaseTax />
         <SalesTax />
         <ExternalLinks />
         <Charts />
+        <Uniswap/>
       </div>
-      <Uniswap/>
       <Footer />
     </>
   )

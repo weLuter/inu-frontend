@@ -1,13 +1,15 @@
 import React from 'react';
 import { FileCodeFill, Telegram, Twitter, Medium, Github } from "react-bootstrap-icons";
-import logo16 from '../images/logo16.png'
+import logo16 from '../images/logo64.svg'
 
 const NavBar = (props) => {
+  const buttonStyle = "w-6 h-6 fill-gray-600 hover:fill-black";
+
   if (props.dashboard === true) {
     return (
-      <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-slate-500 flex justify-between items-center py-6 space-x-10">
+      <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-gray-800 flex justify-between items-center py-6 space-x-10">
         <div className="flex justify-start flex-grow">
-          <a href="/"><img className="width-16" src={logo16} alt=""/></a>
+          <a href="/"><img className="" src={logo16} alt=""/></a>
         </div>
         <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
           <a
@@ -21,15 +23,15 @@ const NavBar = (props) => {
     );
   }
   return (
-    <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-slate-500 flex justify-between items-center py-6 space-x-10">
+    <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-gray-800 flex justify-between items-center py-6 space-x-10">
       <div className="flex justify-start flex-grow">
         <a href="/"><img className="width-16" src={logo16} alt=""/></a>
       </div>
-      <a className="md:block hidden" href="https://etherscan.io/"><FileCodeFill className="ButtonLink"/></a>
-      <a className="md:block hidden" href="https://t.me/inucapitalentryportal"><Telegram className="ButtonLink"/></a>
-      <a className="md:block hidden" href="https://twitter.com/InuCapital"><Twitter className="ButtonLink"/></a>
-      <a className="md:block hidden" href="https://medium.com"><Medium className="ButtonLink"/></a>
-      <a className="md:block hidden" href="https://github.com"><Github className="ButtonLink"/></a>
+      <a className="md:block hidden" href="https://etherscan.io/"><FileCodeFill className={buttonStyle}/></a>
+      <a className="md:block hidden" href="https://t.me/inucapitalentryportal"><Telegram className={buttonStyle}/></a>
+      <a className="md:block hidden" href="https://twitter.com/InuCapitaI"><Twitter className={buttonStyle}/></a>
+      <a className="md:block hidden" href="https://medium.com"><Medium className={buttonStyle}/></a>
+      <a className="md:block hidden" href="https://github.com"><Github className={buttonStyle}/></a>
       <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
         <a
           href="/dashboard"

@@ -3,7 +3,7 @@ import 'tw-elements';
 
 const Charts = () =>{
   return (
-    <div class="mx-auto max-w-screen-sm accordion" id="accordionExample">
+    <div class="mx-auto max-w-screen-sm accordion mb-4" id="accordionExample">
       <div class="accordion-item bg-white border border-gray-200">
         <div class="flex flex-row justify-between space-between">
           <div className="px-4 py-3 sm:px-6">

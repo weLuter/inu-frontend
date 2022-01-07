@@ -1,11 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
-import logo16 from '../images/logo16.png'
+import logo16 from '../images/logo64.svg'
 import { FileCodeFill, Telegram, Twitter, Medium, Github } from "react-bootstrap-icons";
 
 const Dashboard = () => {
   const wrapperRef = useRef(null);
   const [pageIndex, setIndex] = useState(0);
   const [sidebar, setSidebar] = useState(false);
+  const buttonStyle = "w-6 h-6 fill-gray-600 hover:fill-black";
+
   function useOutsideAlerter(ref) {
     useEffect(() => {
         function handleClickOutside(event) {
@@ -26,7 +28,7 @@ const Dashboard = () => {
     setSidebar(false);
   }
 
-  const cardStyle = "p-3 h-60 w-full min-h-24 flex flex-col flex-grow shadow bg-gray-800 text-blue-200 rounded-lg"
+  const cardStyle = "p-3 h-30 md:h-60 w-full min-h-24 flex flex-col flex-grow shadow bg-gray-800 text-blue-200 rounded-lg"
   const gridStyle = "grid content-start gap-2 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1"
   const tableRowStyle = "my-4"
 
@@ -175,12 +177,12 @@ const Dashboard = () => {
             </ul>
           </div>
           <div id="footer" className="mx-auto flex flex-col border-t-2 border-gray-600 justify-between py-4 px-4">
-            <div className="mx-auto flex flex-row sm:pt-0 pt-2 mb-4 pb-1">
-              <a className="" href="https://etherscan.io/"><FileCodeFill className="ButtonLink"/></a>
-              <a className="" href="https://t.me/InuCapitalEntryPortal"><Telegram className="ButtonLink"/></a>
-              <a className="" href="https://twitter.com/InuCapital"><Twitter className="ButtonLink"/></a>
-              <a className="" href="https://medium.com"><Medium className="ButtonLink"/></a>
-              <a className="" href="https://github.com"><Github className="ButtonLink"/></a>
+            <div className="mx-auto flex flex-row space-x-4 sm:pt-0 pt-2 mb-4 pb-1">
+              <a className="" href="https://etherscan.io/"><FileCodeFill className={buttonStyle}/></a>
+              <a className="" href="https://t.me/InuCapitalEntryPortal"><Telegram className={buttonStyle}/></a>
+              <a className="" href="https://twitter.com/InuCapitaI"><Twitter className={buttonStyle}/></a>
+              <a className="" href="https://medium.com"><Medium className={buttonStyle}/></a>
+              <a className="" href="https://github.com"><Github className={buttonStyle}/></a>
             </div>
             <div class="mx-auto">
               <p class="text-center text-sm text-gray-400">© 2022 Inu Capital, Inc. All rights reserved</p>
@@ -190,8 +192,8 @@ const Dashboard = () => {
       <div className="flex flex-no-wrap min-h-screen">
         <div className="w-72 absolute sm:relative bg-gray-800 shadow min-h-screen flex-col justify-start hidden sm:flex">
           <div className="px-8 h-24 w-full flex items-center border-b-2 border-gray-600">
-            <a href="/"><img class="mr-6 width-16" src={logo16} alt=""/></a>
-            <a href="/"><p class="text-3xl text-blue-600">Inu Capital</p></a>
+            <a href="/"><img class="mr-6 width-12" src={logo16} alt=""/></a>
+            <a href="/"><p class="text-2xl text-blue-600">Inu Capital</p></a>
           </div>
           <ul className="px-8 mt-8">
             <li onClick={() => setPageIndex(0)} className={`flex w-full justify-between cursor-pointer items-center mb-6 ${pageIndex === 0 ? 'text-gray-300' : 'text-gray-600 hover:text-gray-500'}`}>
@@ -226,12 +228,12 @@ const Dashboard = () => {
           </ul>
           <div class="flex-grow"/>
           <div id="footer" className="mx-auto flex flex-col border-t-2 border-gray-600 justify-between py-4 px-4">
-            <div className="mx-auto flex flex-row sm:pt-0 pt-2 mb-4 pb-1">
-              <a className="" href="https://etherscan.io/"><FileCodeFill className="ButtonLink"/></a>
-              <a className="" href="https://t.me/InuCapitalEntryPortal"><Telegram className="ButtonLink"/></a>
-              <a className="" href="https://twitter.com/InuCapital"><Twitter className="ButtonLink"/></a>
-              <a className="" href="https://medium.com"><Medium className="ButtonLink"/></a>
-              <a className="" href="https://github.com"><Github className="ButtonLink"/></a>
+            <div className="mx-auto flex flex-row space-x-4 sm:pt-0 pt-2 mb-4 pb-1">
+              <a className="" href="https://etherscan.io/"><FileCodeFill className={buttonStyle}/></a>
+              <a className="" href="https://t.me/InuCapitalEntryPortal"><Telegram className={buttonStyle}/></a>
+              <a className="" href="https://twitter.com/InuCapitaI"><Twitter className={buttonStyle}/></a>
+              <a className="" href="https://medium.com"><Medium className={buttonStyle}/></a>
+              <a className="" href="https://github.com"><Github className={buttonStyle}/></a>
             </div>
             <div class="mx-auto">
               <p class="text-center text-sm text-gray-400">© 2022 Inu Capital, Inc. All rights reserved</p>

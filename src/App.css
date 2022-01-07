@@ -3,13 +3,3 @@
   top: 0;
   width: 100%;
 }
-
-.ButtonLink {
-  width: 40px;
-  height: 20px;
-  color: #9ca3b0;
-}
-
-.ButtonLink:hover {
-  color: black;
-}
