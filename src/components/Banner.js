@@ -5,7 +5,7 @@ const Banner = (props) => {
     <div class="flex flex-col justify-center items-center w-full h-[calc(100%-6rem)] bg-slate-300 dark:bg-slate-700 px-6 md:px-32">
       <p class="text-center md:text-left font-bold text-gray-900 sm:text-8xl text-6xl">Inu Capital</p>
       <p class="text-center md:text-left pt-2 text-3xl sm:text-4xl text-blue-600 mb-8">defi is hard. we make it easy and farm for you</p>
-      <div class="h-28 sm:hidden block"/>
+      <div class="h-12 sm:h-20 sm:hidden block"/>
         <div className="mt-2 h-12 flex sm:space-x-2 sm:space-y-0 space-y-2 sm:flex-row flex-col justify-center">
           <div className="flex rounded-md shadow" onClick={props.scroll}>
             <a
