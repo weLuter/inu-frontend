@@ -22,20 +22,23 @@ const NavBar = (props) => {
       </div>
     );
   }
+
   return (
-    <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 bg-gray-800 flex justify-between items-center py-6 space-x-10">
-      <div className="flex justify-start flex-grow">
+    <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 py-6 bg-white flex justify-between items-center">
+      <div className="flex">
         <a href="/"><img className="width-16" src={logo16} alt=""/></a>
       </div>
-      <a className="md:block hidden" href="https://etherscan.io/"><FileCodeFill className={buttonStyle}/></a>
-      <a className="md:block hidden" href="https://t.me/inucapitalentryportal"><Telegram className={buttonStyle}/></a>
-      <a className="md:block hidden" href="https://twitter.com/InuCapitaI"><Twitter className={buttonStyle}/></a>
-      <a className="md:block hidden" href="https://medium.com"><Medium className={buttonStyle}/></a>
+      <div class="flex flex-row">
+      <a className="md:block hidden ml-16 mr-4" href="https://etherscan.io/"><FileCodeFill className={buttonStyle}/></a>
+      <a className="md:block hidden mr-4" href="https://t.me/inucapitalentryportal"><Telegram className={buttonStyle}/></a>
+      <a className="md:block hidden mr-4" href="https://twitter.com/InuCapitaI"><Twitter className={buttonStyle}/></a>
+      <a className="md:block hidden mr-4" href="https://medium.com"><Medium className={buttonStyle}/></a>
       <a className="md:block hidden" href="https://github.com"><Github className={buttonStyle}/></a>
-      <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
+      </div>
+      <div className="items-center">
         <a
           href="/dashboard"
-          className="transition ease-in-out hover:scale-110 duration-300 ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border-0 rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+          className="transition ease-in-out hover:scale-110 duration-300 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border-0 rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
         >
           Dashboard
         </a>

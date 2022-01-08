@@ -12,9 +12,14 @@ const ExternalLinks = () =>{
             Uniswap
           </a>
         </div>
-        <div className="flex rounded-md shadow">
+        <div className="flex rounded-md shadow mb-2">
           <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-0 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
             Contract
+          </a>
+        </div>
+        <div className="flex rounded-md shadow">
+          <a href="#" className="flex flex-grow items-center justify-center px-5 py-2 border border-0 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+            Whitepaper
           </a>
         </div>
       </div>
