@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBar from './NavBar'
-import Banner from './Banner'
-import Tokenomics from './Tokenomics'
-import PurchaseTax from './PurchaseTax'
-import SalesTax from './SalesTax'
-import ExternalLinks from './ExternalLinks'
-import Charts from './Charts'
-import Uniswap from './Uniswap'
+import NavBar from './home/NavBar'
+import Banner from './home/Banner'
+import Tokenomics from './home/Tokenomics'
+import PurchaseTax from './home/PurchaseTax'
+import SalesTax from './home/SalesTax'
+import ExternalLinks from './home/ExternalLinks'
+import Charts from './home/Charts'
+import Uniswap from './home/Uniswap'
 import Footer from './Footer'
 
 const Home = () => {
