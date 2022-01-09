@@ -4,7 +4,7 @@ import PortfolioPage from './PortfolioPage';
 import BuybackPage from './BuybackPage';
 
 const DashboardContent = (props) => {
-  const {pageIndex, sidebar, setSidebar, setOpen, accountData, disconnect, dashboardRef, portfolioRef, buybackRef} = props;
+  const {address, sidebar, setSidebar, setOpen, accountData, disconnect, dashboardRef, portfolioRef, buybackRef} = props;
   const dashboardHeader = "text-3xl font-bold mt-8 mb-2 border-b-2 border-gray-600";
   const [ balance, setBalance ] = useState(0);
   const [ usdBalance, setUSDBalance ] = useState(0);
@@ -15,7 +15,8 @@ const DashboardContent = (props) => {
 
   // portfolio balance/usd, price
   useEffect(() => {
-    fetch('https://api.covalenthq.com/v1/1/address/0x79C690290F799ee644907a526aFae9Cf7d5cB05c/balances_v2/?key=ckey_67dd815cfb02407db132ea9be72')
+    console.log(address)
+    fetch(`https://api.covalenthq.com/v1/1/address/${address}/balances_v2/?key=ckey_67dd815cfb02407db132ea9be72`)
         .then(response => response.json())
         .then(data => {
           console.log((data));
@@ -27,7 +28,7 @@ const DashboardContent = (props) => {
             }
           }
         });
-  }, []);
+  }, [address]);
 
   // treasury AUM
   useEffect(() => {
