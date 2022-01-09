@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useConnect, useAccount, useBalance } from 'wagmi'
+import { useConnect, useAccount } from 'wagmi'
 import Sidebar from './dashboard/Sidebar';
 import PageView from './dashboard/PageView';
 import WalletModal from './dashboard/WalletModal';
@@ -13,10 +13,6 @@ const Dashboard = () => {
   const [{ data, error }, connect] = useConnect()
   const [{ data: accountData }, disconnect] = useAccount({
     fetchEns: true,
-  })
-  const [{ data: balanceData, error: balanceError, loading }, getBalance] = useBalance({
-    addressOrName: '0x79C690290F799ee644907a526aFae9Cf7d5cB05c',
-    // token: '0xC146B7CdBaff065090077151d391f4c96Aa09e0C',
   })
 
   const setPageIndex = (index) => {

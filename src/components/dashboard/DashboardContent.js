@@ -10,24 +10,25 @@ const DashboardContent = (props) => {
   const [ usdBalance, setUSDBalance ] = useState(0);
   const [ usdPrice, setUSDPrice ] = useState(0);
   const [ holders, setHolders ] = useState(0);
-  const [ treasury, setTreasury] = useState(0);
-  const [ marketCap, setMarketCap] = useState(0);
+  const [ treasury, setTreasury ] = useState(0);
+  const [ marketCap, setMarketCap ] = useState(0);
+  const [ liquidity, setLiquidity ] = useState(0);
 
   // portfolio balance/usd, price
   useEffect(() => {
-    console.log(address)
-    fetch(`https://api.covalenthq.com/v1/1/address/${address}/balances_v2/?key=ckey_67dd815cfb02407db132ea9be72`)
-        .then(response => response.json())
-        .then(data => {
-          console.log((data));
-          for(let i=0; i<data.data.items.length; i++) {
-            if (data.data.items.at(i).contract_address === "0xc146b7cdbaff065090077151d391f4c96aa09e0c") {
-              setBalance((data.data.items.at(i).balance / (10 ** data.data.items.at(i).contract_decimals)).toFixed(2))
-              setUSDBalance(data.data.items.at(i).quote.toFixed(2))
-              setUSDPrice(data.data.items.at(i).quote_rate.toFixed(8))
+    if (address) {
+      fetch(`https://api.covalenthq.com/v1/1/address/${address}/balances_v2/?key=ckey_67dd815cfb02407db132ea9be72`)
+          .then(response => response.json())
+          .then(data => {
+            for(let i=0; i<data.data.items.length; i++) {
+              if (data.data.items.at(i).contract_address === "0xc146b7cdbaff065090077151d391f4c96aa09e0c") {
+                setBalance((data.data.items.at(i).balance / (10 ** data.data.items.at(i).contract_decimals)).toFixed(2))
+                setUSDBalance(data.data.items.at(i).quote.toFixed(2))
+                setUSDPrice(data.data.items.at(i).quote_rate.toFixed(8))
+              }
             }
-          }
-        });
+          });
+    }
   }, [address]);
 
   // treasury AUM
@@ -35,7 +36,6 @@ const DashboardContent = (props) => {
     fetch('https://api.covalenthq.com/v1/1/address/0xFBf335f8224a102e22abE78D78CC52dc95e074Fa/balances_v2/?key=ckey_67dd815cfb02407db132ea9be72')
         .then(response => response.json())
         .then(data => {
-          console.log((data));
           let total = 0;
           for(let i=0; i<data.data.items.length; i++) {
             total += data.data.items.at(i).quote
@@ -53,17 +53,27 @@ const DashboardContent = (props) => {
         });
   }, []);
 
+   //uniswap liquidity
+   useEffect(() => {
+    fetch('https://api.covalenthq.com/v1/1/address/0x9c2B19dbDFad3f283C0B96C5546d91a275778D91/stacks/uniswap_v2/balances/?quote-currency=USD&format=JSON&key=ckey_docs')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          const balances = data.data.uniswap_v2.balances.at(0);
+          let total = balances.token_0.quote + balances.token_1.quote;
+          setLiquidity(total);
+        });
+  }, []);
+
   // market cap
   useEffect(() => {
     fetch('https://api.coingecko.com/api/v3/coins/ethereum/contract/0xc146b7cdbaff065090077151d391f4c96aa09e0c/market_chart/?vs_currency=usd&days=1')
         .then(response => response.json())
         .then(data => {
-          // setMarketCap(data.data.market_caps.at(0));
-          console.log(data.market_caps.at(0).at(0)/10000)
+          console.log(data)
           setMarketCap((data.market_caps.at(0).at(0)/10000).toFixed(2));
         });
   }, []);
-
 
   return (
     <div className="bg-slate-400 flex flex-col max-h-screen flex-grow px-0  sm:px-24">
@@ -98,9 +108,9 @@ const DashboardContent = (props) => {
       </div>
       <div className="flex flex-col px-4 pb-10 max-h-screen no-scrollbar overflow-y-auto">
         <p ref={dashboardRef} className={dashboardHeader}>General</p>
-        <DashboardPage holders={holders} treasury={treasury} marketCap={marketCap} usdPrice={usdPrice}/>
+        <DashboardPage liquidity={liquidity} holders={holders} treasury={treasury} marketCap={marketCap} usdPrice={usdPrice}/>
         <p ref={portfolioRef} className={dashboardHeader}>Portfolio</p>
-        <PortfolioPage usdBalance={usdBalance} balance={balance} />
+        <PortfolioPage setOpen={setOpen} address={address} usdBalance={usdBalance} balance={balance} />
         <p ref={buybackRef} className={dashboardHeader}>Buybacks</p>
         <BuybackPage/>
       </div>

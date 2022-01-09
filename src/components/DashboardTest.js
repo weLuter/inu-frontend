@@ -71,7 +71,7 @@ const DashboardTest = () => {
       <WalletModal open={open} cancelButtonRef={cancelButtonRef} setOpen={setOpen} data={data} error={error} connect={connect}/>
       <div className="flex flex-no-wrap">
         <Sidebar test={true} handleNavigate={handleNavigate} dashboardRef={dashboardRef} portfolioRef={portfolioRef} buybackRef={buybackRef} setPageIndex={setPageIndex} pageIndex={pageIndex} sidebar={sidebar} wrapperRef={wrapperRef} />
-        <DashboardContent address={accountData?.address} dashboardRef={dashboardRef} portfolioRef={portfolioRef} buybackRef={buybackRef} pageIndex={pageIndex} sidebar={sidebar} setSidebar={setSidebar} setOpen={setOpen} accountData={accountData} disconnect={disconnect}/>
+        <DashboardContent setOpen={setOpen} address={accountData?.address} dashboardRef={dashboardRef} portfolioRef={portfolioRef} buybackRef={buybackRef} pageIndex={pageIndex} sidebar={sidebar} setSidebar={setSidebar} setOpen={setOpen} accountData={accountData} disconnect={disconnect}/>
       </div>
     </div>
   )

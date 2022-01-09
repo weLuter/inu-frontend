@@ -1,9 +1,10 @@
 import React from 'react';
 
 const PortfolioPage = (props) => {
-  const { balance, usdBalance } = props;
+  const { setOpen, address, balance, usdBalance } = props;
   const cardStyle = "p-3 h-30 md:h-60 w-full min-h-24 flex flex-col justify-between flex-grow shadow bg-gray-800 rounded-lg text-xl text-slate-300"
 
+  if (address) {
   return (
     <div class="grid content-start gap-2 text-center text-white xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1">
       <div class={cardStyle}>
@@ -47,7 +48,18 @@ const PortfolioPage = (props) => {
         </button>
       </div>
     </div>
-  );
+    );
+  } else {
+    return(<div class="grid content-start gap-2 text-center text-white xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1">
+    <div class='p-3 h-30 md:h-60 w-full min-h-24 flex flex-col flex-grow shadow bg-gray-800 rounded-lg text-xl text-slate-300 justify-center'>
+      <p class="text-2xl mb-4">Connect your wallet to access your portfolio</p>
+      <button onClick={() => setOpen(true)} className="align-self-center transition ease-in-out hover:scale-110 duration-300 whitespace-nowrap inline-flex justify-center px-4 py-2 border-0 rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700">
+        Connect
+      </button>
+    </div>
+  </div>);
+  }
+
 }
 
 export default PortfolioPage;
