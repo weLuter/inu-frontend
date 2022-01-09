@@ -1,13 +1,11 @@
 import React from 'react';
 
-const PortfolioPage = () => {
+const PortfolioPage = (props) => {
+  const { balance, usdBalance } = props;
   const cardStyle = "p-3 h-30 md:h-60 w-full min-h-24 flex flex-col justify-between flex-grow shadow bg-gray-800 rounded-lg text-xl text-slate-300"
-  const gridStyle = "grid content-start gap-2 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 text-slate-300 text-center"
-  // const cardStyle = "p-3 h-30 md:h-60 w-full min-h-24 flex flex-col flex-grow shadow bg-gray-800 rounded-lg text-slate-300"
 
   return (
     <div class="grid content-start gap-2 text-center text-white xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1">
-      {/* <div class="flex flex-col p-3 h-30 mb-2 md:h-60 min-h-24 shadow bg-gray-800 rounded-lg"> */}
       <div class={cardStyle}>
         <p class="text-xl">Portfolio Overview</p>
         <table class="table-auto text-left text-md">
@@ -20,23 +18,23 @@ const PortfolioPage = () => {
           <tbody>
             <tr>
               <td>Balance ($INC)</td>
-              <td>0</td>
+              <td>{balance}</td>
             </tr>
             <tr>
               <td>Balance ($USD)</td>
-              <td>$0</td>
+              <td>${usdBalance}</td>
             </tr>
             <tr>
-              <td>Dividend Claimed (ETH)</td>
-              <td>0</td>
+              <td>Dividends (ETH)</td>
+              <td>NA</td>
             </tr>
             <tr>
-              <td>Dividend Claimed ($USD)</td>
-              <td>$0</td>
+              <td>Dividends ($USD)</td>
+              <td>NA</td>
             </tr>
             <tr>
               <td>Pending Dividends (ETH)</td>
-              <td>0</td>
+              <td>NA</td>
             </tr>
           </tbody>
         </table>

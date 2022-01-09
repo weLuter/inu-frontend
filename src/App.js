@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
+import DashboardTest from './components/DashboardTest';
 import {
   BrowserRouter as Router,
   Routes,
@@ -46,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/dashboard" element={<Provider autoConnect connectors={connectors}><Dashboard/></Provider>}/>
+            <Route path="/dashboard/test" element={<Provider autoConnect connectors={connectors}><DashboardTest/></Provider>}/>
           </Routes>
         </div>
       </Router>

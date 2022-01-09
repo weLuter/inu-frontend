@@ -1,6 +1,7 @@
 import React from 'react';
 
-const DashboardPage = () => {
+const DashboardPage = (props) => {
+  const { holders, treasury, marketCap, usdPrice } = props;
   const cardStyle = "p-3 h-30 md:h-60 w-full min-h-24 flex flex-col justify-between flex-grow shadow bg-gray-800 rounded-lg text-xl text-slate-300"
   const gridStyle = "grid content-start gap-2 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 text-slate-300 text-center"
 
@@ -8,7 +9,7 @@ const DashboardPage = () => {
     <div class={gridStyle}>
       <div class={cardStyle}>
         <p>Assets Under Management</p>
-        <p className="text-4xl text-white">$0</p>
+        <p className="text-4xl text-white">${treasury}</p>
         <div className="h-1"></div>
       </div>
       <div class={cardStyle}>
@@ -23,11 +24,11 @@ const DashboardPage = () => {
           <tbody>
             <tr>
               <td>Market Cap</td>
-              <td>$0</td>
+              <td>${marketCap}</td>
             </tr>
             <tr>
               <td>Price</td>
-              <td>$0</td>
+              <td>${usdPrice}</td>
             </tr>
             <tr>
               <td>All Time High</td>
@@ -39,7 +40,7 @@ const DashboardPage = () => {
             </tr>
             <tr>
               <td>Holders</td>
-              <td>0</td>
+              <td>{holders}</td>
             </tr>
           </tbody>
         </table>
