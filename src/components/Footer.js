@@ -2,7 +2,7 @@ import React from 'react';
 import { FileCodeFill, Telegram, Twitter, Medium, Github } from "react-bootstrap-icons";
 
 const Footer = () => {
-  const buttonStyle = "w-6 h-6 fill-gray-600 hover:fill-black";
+  const buttonStyle = "w-6 h-6 fill-gray-600 hover:fill-white";
 
   return (
     <div class="bg-gray-800 px-8">

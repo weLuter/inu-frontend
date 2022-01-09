@@ -3,7 +3,7 @@ import { FileCodeFill, Telegram, Twitter, Medium, Github } from "react-bootstrap
 import logo16 from '../../images/logo64.svg'
 
 const NavBar = () => {
-  const buttonStyle = "w-6 h-6 fill-gray-600 hover:fill-black";
+  const buttonStyle = "w-6 h-6 fill-gray-400 hover:fill-black";
 
   return (
     <div className="sticky top-0 w-full z-20 h-24 sm:px-20 px-10 py-6 bg-white flex justify-between items-center">
